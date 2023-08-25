@@ -1,11 +1,12 @@
 def find_Largest_Product(digits):
     maxVal = 0
     range_val = 13
-    zero_idx = list()
+    zero_idx = [-1]
     nums = [int(val) for val in ''.join(digits.split())]
     for idx, val in enumerate(nums):
         if not val:
             zero_idx.append(idx)
+    zero_idx.append(len(nums)+1)
     
     for i in range(len(zero_idx)-1):
         if zero_idx[i+1] - zero_idx[i] > range_val:
@@ -58,31 +59,3 @@ if __name__ == "__main__":
         main()
     except:
         print("Keyboard interruption detected, quitting")
-    
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
