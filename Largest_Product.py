@@ -54,7 +54,10 @@ def main():
     print(find_Largest_Product(digits))
     
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except:
+        print("Keyboard interruption detected, quitting")
     
             
 
